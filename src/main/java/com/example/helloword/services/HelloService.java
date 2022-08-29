@@ -14,6 +14,6 @@ public class HelloService implements IHelloService {
         //passar nome para primeira letra para maiusculo
         String nome = name.substring(0, 1).toUpperCase() + name.substring(1);
 
-        return "Hello "+ nome+"! São " + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+        return "Hello "+ nome+"! Agora são " + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm") ) + ", não se esqueça!";
     }
 }
