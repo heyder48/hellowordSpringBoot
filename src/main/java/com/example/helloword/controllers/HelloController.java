@@ -36,8 +36,7 @@ public class HelloController {
     @RequestMapping(value = "/hello/{nome}/horario", method = RequestMethod.GET)
     public ResponseEntity<String> horario(@PathVariable String nome) {
         logger.info("Endpoint /hello/"+nome+"/horario chamado");
-        logger.info("Retornando horário para "+nome);
-        logger.info("Chamando o serviço HelloService e o método horario(String name)");
+
         return ResponseEntity.ok(helloService.horario(nome));
     }
 }
